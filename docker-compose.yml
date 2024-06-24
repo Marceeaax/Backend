@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  postgresdb:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=luis
+      - POSTGRES_DB=bdpwb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  backend:
+    build: .
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - .:/app
+    command: npm run dev
+volumes:
+  postgres-data:

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Reservas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Reservas</h1>
+        <form id="filterForm">
+            <div class="form-group">
+                <label for="restaurante">Restaurante</label>
+                <select id="restaurante" class="form-control" required>
+                    <option value="">Selecciona un Restaurante</option>
+                    <!-- Opciones dinámicas -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="cliente">Cliente (opcional)</label>
+                <input type="text" id="cliente" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Filtrar</button>
+        </form>
+
+        <table class="table table-dark table-striped mt-4" id="reservasTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Hora Inicio</th>
+                    <th>Hora Fin</th>
+                    <th>Restaurante</th>
+                    <th>Mesa</th>
+                    <th>Capacidad</th>
+                    <th>Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas dinámicas -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/listareservas.js"></script>
+</body>
+</html>
