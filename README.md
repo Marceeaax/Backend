@@ -4,10 +4,8 @@ Proyecto Backend Implementado en Node.js con Docker
 
 # Integrantes:
 
-- Luis Cañete
-- Oscar Pedrozo
-- Edher Coronel
-- José Gonzalez
+- Marcelo Aguayo
+- Amilcar Gimenez
 
 ## Descripción del Proyecto
 
